@@ -1,12 +1,142 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+    <header class="page-head">
+      <div class="container">
+        <div class="header-logo">
+          <a class="header-logo__link" href="#"><img src="/img/logo.jpg" height="" width="" alt="Веб-студия Нёрдс"></a>
+        </div>
+        <nav class="site-nav">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a href="#">Студия</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#">Клиенты</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#">Магазин</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="site-cart">
+          <a class="site-cart__link" href="#">Корзина</a>
+        </div>
+        <div class="header-slideshow">
+          <section class="header-slide">
+            <h2 class="header-slide__title">Долго, дорого, скрупулезно.</h2>
+            <p class="header-slide__description">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+            <a class="header-slide__btn-learn-more" href="#">Узнать больше</a>
+            <img class="header-slide__image-1" src="/img/slide-1.jpg" width="" height="" alt="Дизайн для сайта или мобильного приложения">
+          </section>
+          <div class="header-slide-pager">
+            <input class="header-slide-pager__item-1--active" type="radio" id="btn-1" name="toggle" checked>
+            <input class="header-slide-pager__item-2" type="radio" id="btn-2" name="toggle">
+            <input class="header-slide-pager__item-3" type="radio" id="btn-3" name="toggle">
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <section class="our-services">
+        <ul class="our-services__list">
+          <li class="our-services__item">
+            <img class="our-services__image" src="/img/web-sites.jpg" alt="Веб-сайты">
+            <b class="heading">Веб-сайты</b>
+            <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+            <a class="btn btn--small btn--red" href="#">Заказать</a>
+          </li>
+          <li class="our-services__item">
+            <img class="our-services__image" src="/img/apps.jpg" alt="Веб-сайты">
+            <b class="heading">Приложения</b>
+            <p>Покорите топ-10 приложений в AppStrore и Google Play</p>
+            <a class="btn btn--small btn--green" href="#">Заказать</a>
+          </li>
+          <li class="our-services__item">
+            <img class="our-services__image" src="/img/presentations.jpg" alt="Веб-сайты">
+            <b class="heading">Презентации</b>
+            <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+            <a class="btn btn--small btn--yellow" href="#">Заказать</a>
+          </li>
+        </ul>
+      </section>
+      <hr>
+      <section class="about-us">
+        <div class="about-us__block">
+          <h2 class="about-us__title">Мы &mdash; маленькая, но гордая дизайн-студия из Краснодара.</h2>
+          <p>
+            Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.
+          </p>
+          <span class="orders-for-developement__title">Выполняем заказы на разработку:</span>
+          <ul class="orders-for-developement__list">
+            <li class="orders-for-developement__item">Веб-сайтов любой сложности</li>
+            <li class="orders-for-developement__item">Мобильных приложений для iOS и Android</li>
+            <li class="orders-for-developement__item">Слайдшоу и видео для корпоративных презентаций</li>
+          </ul>
+        </div>
+        <div class="about-us__block">
+          <img class="about-us__logo" src="#" width="" height="" alt="Веб-студия Нёрдс">
+          <fieldset class="since">
+            <legend class="since__title">Since 2004</legend>
+          </fieldset>
+          <span class="how-we-work__title">Как мы работаем:</span>
+          <ul class="how-we-work__list">
+            <li class="how-we-work__item">С самоотдачей 146%</li>
+            <li class="how-we-work__item">Соблюдая сроки на 100%</li>
+            <li class="how-we-work__item">По предоплате 50%</li>
+          </ul>
+        </div>
+      </section>
+      <hr>
+      <section class="our-partners">
+        <ul class="our-partners__list">
+          <li class="our-partners__item">
+            <img src="/img/glukhanko.jpg" width="" height="" alt="Glukhanko">
+          </li>
+          <li class="our-partners__item">
+            <img src="/img/htmlacademy.jpg" width="" height="" alt="html academy">
+          </li>
+          <li class="our-partners__item">
+            <img src="/img/barbershop-borodinski.jpg" width="" height="" alt="Barbershop Borodinski">
+          </li>
+        </ul>
+      </section>
+      <hr>
+    </main>
+    <footer class="page-footer">
+      <section class="page-footer__contact-info">
+        <h2 class="heading">Nërds design studio</h2>
+        <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <p>тел. +7 (812) 275-75-75</p>
+        <a class="btn btn--full" href="#">Напишите нам</a>
+      </section>
+      <section class="page-footer__social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social-item__btn social-item_vk" href="#"></a>
+          </li>
+          <li class="social__item">
+            <a class="social-item__btn social-item_fb" href="#"></a>
+          </li>
+          <li class="social__item">
+            <a class="social-item__btn social-item_inst" href="#"></a>
+          </li>
+        </ul>
+        <h2 class="heading">Давайте дружить, это выгодно!</h2>
+        <p>
+          Скидка 10% для друзей из социальных сетей.
+        </p>
+      </section>
+    </footer>
   </body>
 </html>
