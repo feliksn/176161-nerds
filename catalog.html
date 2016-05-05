@@ -4,46 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/default.css">
     <title>Магазин готовых макетов | Нёрдс</title>
   </head>
   <body>
     <header class="header">
-      <div class="container clearfix">
-        <div class="header__logo">
-          <a class="header__link" href="#"><img src="/img/logo.jpg" height="" width="" alt="Веб-студия Нёрдс"></a>
-        </div>
+      <div class="g-clearfix">
         <nav class="nav">
+          <div class="nav__logo">
+            <a class="nav__link" href="#"><img src="/img/logo.png" height="" width="" alt="Веб-студия Нёрдс"></a>
+          </div>
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="header__link" href="#">Студия</a>
+              <a class="nav__link" href="#">Студия</a>
             </li>
             <li class="nav__item">
-              <a class="header__link" href="#">Клиенты</a>
+              <a class="nav__link" href="#">Клиенты</a>
             </li>
             <li class="nav__item">
-              <a class="header__link" href="#">Магазин</a>
+              <a class="nav__link nav__link_selected">Магазин</a>
             </li>
             <li class="nav__item">
-              <a class="header__link" href="#">Контакты</a>
+              <a class="nav__link" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
         <div class="cart">
-          <a class="header__link" href="#">Корзина</a>
+          <a class="cart__link" href="#">Корзина</a>
         </div>
       </div>
-      <!-- Не нравится двойной контейнер в хедере -->
-      <div class="container">
-        <div class="header__welcome-title">
-          <span class="title">Добро пожаловать в
-            <h1 class="title">магазин готовых макетов</h1>
+        <div class="welcome-title">
+          <span class="heading-2">Добро пожаловать в <h1 class="heading-2">магазин готовых макетов</h1>
           </span>
         </div>
-      </div>
     </header>
-    <main class="main container clearfix">
+    <main class="main g-clearfix">
       <section class="filter">
         <form class="filter__form" action="/echo" method="post">
           <div class="filter__price">
@@ -108,12 +104,12 @@
               <input class="filter__features" type="checkbox" name="cart" value="cart">
               Слайдер
             </label>
-            <a class="btn btn_gray" href="#">Показать</a>
           </div>
+          <input class="btn btn_gray" type="submit" name="filter" value="Показать">
         </form>
       </section>
       <div class="catalog__list">
-        <section class="sorter clearfix">
+        <section class="sorter g-clearfix">
           <div class="sorter_pos_left">
             <div class="sorter__label">Сортировать:</div>
             <a class="link sorter__link sorter__link_selected" href="#">По цене</a>
@@ -121,8 +117,8 @@
             <a class="link sorter__link" href="#">По функционалу</a>
           </div>
           <div class="sorter_pos_right">
-            <a class="sorter__item-asc_selected" href="#"></a>
-            <a class="sorter__item-desc" href="#"></a>
+            <span class="sorter__item-asc_selected"></span>
+            <span class="sorter__item-desc"></span>
           </div>
         </section>
         <article class="catalog-item">
@@ -207,14 +203,16 @@
         </div>
       </div>
     </main>
-    <footer class="page-footer">
-      <section class="page-footer__contact-info">
-        <h2 class="heading">Nërds design studio</h2>
-        <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        <p>тел. +7 (812) 275-75-75</p>
-        <a class="btn btn_red" href="#">Напишите нам</a>
+    <footer class="footer">
+      <section class="contact-info">
+        <div class="contact-info__contact-us">
+          <span class="contact-info__title">Nërds design studio</span>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7 (812) 275-75-75</p>
+          <a class="btn btn_red" href="#">Напишите нам</a>
+        </div>
       </section>
-      <section class="page-footer__social">
+      <section class="social g-clearfix">
         <ul class="social__list">
           <li class="social__item">
             <a class="social-item__btn social-item__vk" href="#"></a>
@@ -226,10 +224,12 @@
             <a class="social-item__btn social-item__inst" href="#"></a>
           </li>
         </ul>
-        <h2 class="heading">Давайте дружить, это выгодно!</h2>
-        <p>
+        <div class="social__text-block">
+        <span class="social__title">Давайте дружить, это выгодно!</span>
+        <p class="social__text">
           Скидка 10% для друзей из социальных сетей.
         </p>
+      </div>
       </section>
     </footer>
   </body>
