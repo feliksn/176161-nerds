@@ -1,12 +1,161 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU">
   <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/default.css">
+    <title>Магазин готовых макетов | Нёрдс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+    <header class="header">
+      <div class="g-clearfix">
+        <nav class="nav">
+          <div class="nav__logo">
+            <a class="nav__link nav__link nav__link_selected"><img src="/img/logo.png" height="" width="" alt="Веб-студия Нёрдс"></a>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link_selected">Студия</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Клиенты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Магазин</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cart">
+          <a class="cart__link" href="#">Корзина</a>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slider-controls">
+          <i class="active"></i>
+          <i></i>
+          <i></i>
+        </div>
+        <div class="slides">
+          <div class="slide">
+            <div class="slide-text">
+              <div class="heading-1">Долго, дорого, скрупулезно</div>
+              <p>Математически выверенный дизайн<br>
+                для вашего сайта или мобильного приложения.</p>
+              <a class="btn btn_red" href="#">Узнать больше</a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-text">
+              <div class="heading-1">Дорого, скрупулезно</div>
+              <p>Математически выверенный дизайн<br>
+                для вашего сайта или мобильного приложения.</p>
+              <a class="btn btn_red" href="#">Узнать больше</a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-text">
+              <div class="heading-1">Скрупулезно</div>
+              <p>Математически выверенный дизайн<br>
+                для вашего сайта или мобильного приложения.</p>
+              <a class="btn btn_red" href="#">Узнать больше</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="our-services g-clearfix">
+        <div class="our-services__item">
+          <img class="our-services__image" src="/img/web-sites.jpg" alt="Веб-сайты">
+          <h2 class="heading-3">Веб-сайты</h2>
+          <p class="our-services__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <a class="btn btn_small btn_red" href="#">Заказать</a>
+        </div>
+        <div class="our-services__item">
+          <img class="our-services__image" src="/img/apps.jpg" alt="Веб-сайты">
+          <h2 class="heading-3">Приложения</h2>
+          <p class="our-services__text">Покорите топ-10 приложений в AppStrore и Google Play</p>
+          <a class="btn btn_small btn_green" href="#">Заказать</a>
+        </div>
+        <div class="our-services__item">
+          <img class="our-services__image" src="/img/presentations.jpg" alt="Веб-сайты">
+          <h2 class="heading-3">Презентации</h2>
+          <p class="our-services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
+          <a class="btn btn_small btn_yellow" href="#">Заказать</a>
+        </div>
+      </section>
+      <section class="about-us g-clearfix">
+        <div class="about-us__descr-1">
+          <div class="heading-1">Мы &mdash; маленькая, но гордая
+            <h1 class="heading-1">дизайн-студия из Санкт-Петербурга</h1>.</div>
+          <p>
+            Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.
+          </p>
+          <span class="about-us__label">Выполняем заказы на разработку:</span>
+          <ul class="about-us__list">
+            <li class="about-us__item">Веб-сайтов любой сложности</li>
+            <li class="about-us__item">Мобильных приложений для iOS и Android</li>
+            <li class="about-us__item">Слайдшоу и видео для корпоративных презентаций</li>
+          </ul>
+        </div>
+        <div class="about-us__descr-2">
+          <img class="about-us__logo" src="#" width="" height="" alt="Веб-студия Нёрдс">
+          <span>Since 2004</span>
+          <span class="abous-us__label">Как мы работаем:</span>
+          <ul class="about-us__list">
+            <li class="about-us__item">С самоотдачей 146%</li>
+            <li class="about-us__item">Соблюдая сроки на 100%</li>
+            <li class="about-us__item">По предоплате 50%</li>
+          </ul>
+        </div>
+      </section>
+      <section class="our-partners">
+        <ul class="our-partners__list">
+          <li class="our-partners__item">
+            <a class="our-partners__link" href="#"><img src="/img/glukhanko.jpg" width="" height="" alt="Glukhanko"></a>
+          </li>
+          <li class="our-partners__item">
+            <a class="our-partners__link" href="#"><img src="/img/htmlacademy.jpg" width="" height="" alt="html academy"></a>
+          </li>
+          <li class="our-partners__item">
+            <a class="our-partners__link" href="#"><img src="/img/barbershop-borodinski.jpg" width="" height="" alt="Barbershop Borodinski"></a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="contact-info">
+        <div class="contact-info__contact-us">
+          <span class="contact-info__title">Nërds design studio</span>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7 (812) 275-75-75</p>
+          <a class="btn btn_red" href="#">Напишите нам</a>
+        </div>
+      </section>
+      <section class="social g-clearfix">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social-item__btn social-item__vk" href="#">Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social-item__btn social-item__fb" href="#">Facebook</a>
+          </li>
+          <li class="social__item">
+            <a class="social-item__btn social-item__inst" href="#">Instagram</a>
+          </li>
+        </ul>
+        <div class="social__text-block">
+          <span class="social__title">Давайте дружить, это выгодно!</span>
+          <p class="social__text">
+            Скидка 10% для друзей из социальных сетей.
+          </p>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
