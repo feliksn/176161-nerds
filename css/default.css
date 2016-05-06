@@ -44,11 +44,10 @@ ul {
   margin-right: auto;
   padding: 0 10px;
 }
-.nav__logo {
+.nav {
   float: left;
 }
 .nav__list {
-  float: left;
   width: 410px;
 }
 .cart {
