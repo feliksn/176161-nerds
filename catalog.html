@@ -34,78 +34,76 @@
           <a class="cart__link" href="#">Корзина</a>
         </div>
       </div>
-        <div class="welcome-title">
-          <span class="heading-2">Добро пожаловать в <h1 class="heading-2">магазин готовых макетов</h1>
-          </span>
+      <div class="welcome-title">
+        <div class="heading-2">Добро пожаловать в
+          <h1 class="heading-2">магазин готовых макетов</h1>
         </div>
+      </div>
     </header>
     <main class="main g-clearfix">
       <section class="filter">
         <form class="filter__form" action="/echo" method="post">
-          <div class="filter__price">
-            <div class="filter__price-range">
-              <div class="filter__price-scale">
-                <div class="filter__price-bar"></div>
+          <fieldset class="filter__group">
+            <legend class="filter__title">Стоимость:</legend>
+            <div class="filter__price">
+              <div class="filter__price-range">
+                <div class="filter__price-scale">
+                  <div class="filter__price-bar"></div>
+                </div>
+                <div class="filter__price-toggle filter__price-toggle_min"></div>
+                <div class="filter__price-toggle filter__price-toggle_max"></div>
               </div>
-              <div class="filter__price-toggle filter__price-toggle_min"></div>
-              <div class="filter__price-toggle filter__price-toggle_max"></div>
+              <div class="filter__price-controls">
+                <label class="filter__label" for="price-from">От</label>
+                <input class="filter__price-min" type="text" id="price-min" name="price-min" value="0">
+                <label class="filter__label" for="price-to">До</label>
+                <input class="filter__price-max" type="text" id="price-max" name="price-max" value="15 000">
+              </div>
             </div>
-            <div class="filter__price-from-to">
-              <label class="filter__label" for="price-from">От</label>
-              <input type="text" class="filter__price-from-to" id="price-from" name="price-from" value="0">
-              <label class="filter__label" for="price-to">До</label>
-              <input type="text" class="filter__price-from-to" id="price-to" name="price-to" value="15 000">
+          </fieldset>
+          <fieldset class="filter__group">
+            <legend class="filter__title">Сетка:</legend>
+            <div class="filter__grid-type">
+              <label class="filter__label" for="grid-adaptive">
+                <input class="filter__grid-type filter__grid-type_checked" type="radio" id="grid-adaptive" name="grid-adaptive" value="grid-adaptive" checked>
+                Адаптивная
+              </label>
+              <label class="filter__label" for="grid-fixed">
+                <input class="filter__grid-type" type="radio" id="grid-fixed" name="grid-fixed" value="grid-fixed">
+                Фиксированная
+              </label>
+              <label class="filter__label" for="grid-flex">
+                <input class="filter__grid-type" type="radio" id="grid-flex" name="grid-flex" value="grid-flex">
+                Резиновая
+              </label>
             </div>
-          </div>
-          <!--  <div class="filter__price">
-            <label class="filter__label" for="price-range">
-              <span class="fitler__title">Стоимость:</span>
-            </label>
-            <input class="filter__price-range" id="price-range" name="price-range" type="range" min="0" max="15000" step="1">
-            <label class="filter__label" for="price-from">От</label>
-            <output class="filter__price-from-to" name="price-from">0</output>
-            <label class="filter__label" for="price-to">До</label>
-            <output class="filter__price-from-to" name="price-to">15000</output>
-          </div> -->
-          <div class="filter__grid-type">
-            <span class="filter__title">Сетка:</span>
-            <label class="filter__label" for="grid-adaptive">
-              <input class="filter__grid-type filter__grid-type_checked" type="radio" name="grid-adaptive" value="grid-adaptive" checked>
-              Адаптивная
-            </label>
-            <label class="filter__label" for="grid-fixed">
-              <input class="filter__grid-type" type="radio" name="grid-fixed" value="grid-fixed">
-              Фиксированная
-            </label>
-            <label class="filter__label" for="grid-flex">
-              <input class="filter__grid-type" type="radio" name="grid-flex" value="grid-flex">
-              Резиновая
-            </label>
-          </div>
-          <div class="filter__features">
-            <span class="filter__title">Особенности:</span>
-            <label class="filter__label" for="slider">
-              <input class="filter__features filter__features_checked" type="checkbox" name="slider" value="slider" checked>
-              Слайдер
-            </label>
-            <label class="filter__label" for="advantages">
-              <input class="filter__features" type="checkbox" name="advantages" value="advantages">
-              Блок преимуществ
-            </label>
-            <label class="filter__label" for="news">
-              <input class="filter__features filter__features_checked" type="checkbox" name="news" value="news" checked>
-              Новости
-            </label>
-            <label class="filter__label" for="gallery">
-              <input class="filter__features" type="checkbox" name="gallery" value="gallery">
-              Галерея
-            </label>
-            <label class="filter__label" for="cart">
-              <input class="filter__features" type="checkbox" name="cart" value="cart">
-              Слайдер
-            </label>
-          </div>
-          <input class="btn btn_gray" type="submit" name="filter" value="Показать">
+          </fieldset>
+          <fieldset class="filter__group">
+            <legend class="filter__title">Особенности:</legend>
+            <div class="filter__features">
+              <label class="filter__label" for="slider">
+                <input class="filter__features filter__features_checked" type="checkbox" id="slider" name="slider" value="slider" checked>
+                Слайдер
+              </label>
+              <label class="filter__label" for="advantages">
+                <input class="filter__features" type="checkbox" id="advantages" name="advantages" value="advantages">
+                Блок преимуществ
+              </label>
+              <label class="filter__label" for="news">
+                <input class="filter__features filter__features_checked" type="checkbox" id="news" name="news" value="news" checked>
+                Новости
+              </label>
+              <label class="filter__label" for="gallery">
+                <input class="filter__features" type="checkbox" id="gallery" name="gallery" value="gallery">
+                Галерея
+              </label>
+              <label class="filter__label" for="cart">
+                <input class="filter__features" type="checkbox" id="cart" name="cart" value="cart">
+                Слайдер
+              </label>
+            </div>
+          </fieldset>
+          <input class="btn btn_gray" type="submit" id="filter" name="filter" value="Показать">
         </form>
       </section>
       <div class="catalog__list">
@@ -122,76 +120,64 @@
           </div>
         </section>
         <article class="catalog-item">
-          <a class="catalog-link" href="#">
-            <div class="catalog-item__image">
-              <img src="/img/aviator.jpg" width="" height="" alt="AVIATOR">
-            </div>
-            <div class="catalog-item__hover">
-              <h2 class="catalog-item__title">Aviator</h2>
-              <div class="catalog-item__descr">Одностраничный макет с авторским дизайном</div>
-              <a href="#" class="btn btn_catalog-item">8&nbsp;000&nbsp;Р.</a>
-            </div>
-          </a>
+          <div class="catalog-item__image">
+            <img src="/img/aviator.jpg" width="" height="" alt="AVIATOR">
+          </div>
+          <div class="catalog-item__hover">
+            <h2 class="catalog-item__title">Aviator</h2>
+            <div class="catalog-item__descr">Одностраничный макет с авторским дизайном</div>
+            <a href="#" class="btn btn_catalog-item">8&nbsp;000&nbsp;Р.</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <a class="catalog-link" href="#">
-            <div class="catalog-item__image">
-              <img src="/img/sunset.jpg" width="" height="" alt="SUNSET">
-            </div>
-            <div class="catalog-item__hover">
-              <h2 class="catalog-item__title">Sunset</h2>
-              <div class="catalog-item__descr">Интернет-магазин с личным кабинетом</div>
-              <a href="#" class="btn btn_catalog-item">10&nbsp;000&nbsp;Р.</a>
-            </div>
-          </a>
+          <div class="catalog-item__image">
+            <img src="/img/sunset.jpg" width="" height="" alt="SUNSET">
+          </div>
+          <div class="catalog-item__hover">
+            <h2 class="catalog-item__title">Sunset</h2>
+            <div class="catalog-item__descr">Интернет-магазин с личным кабинетом</div>
+            <a href="#" class="btn btn_catalog-item">10&nbsp;000&nbsp;Р.</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <a class="catalog-link" href="#">
-            <div class="catalog-item__image">
-              <img src="/img/forte.jpg" width="" height="" alt="FORTE">
-            </div>
-            <div class="catalog-item__hover">
-              <h2 class="catalog-item__title">Forte</h2>
-              <div class="catalog-item__descr">Отличный макет для личного блога</div>
-              <a href="#" class="btn btn_catalog-item">5&nbsp;000&nbsp;Р.</a>
-            </div>
-          </a>
+          <div class="catalog-item__image">
+            <img src="/img/forte.jpg" width="" height="" alt="FORTE">
+          </div>
+          <div class="catalog-item__hover">
+            <h2 class="catalog-item__title">Forte</h2>
+            <div class="catalog-item__descr">Отличный макет для личного блога</div>
+            <a href="#" class="btn btn_catalog-item">5&nbsp;000&nbsp;Р.</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <a class="catalog-link" href="#">
-            <div class="catalog-item__image">
-              <img src="/img/modern-organic-thai.jpg" width="" height="" alt="MODERN ORGANIC THAI">
-            </div>
-            <div class="catalog-item__hover">
-              <h2 class="catalog-item__title">Modern Organic Thai</h2>
-              <div class="catalog-item__descr">Сайт для ресторана быстрого питания</div>
-              <a href="#" class="btn btn_catalog-item">12&nbsp;000&nbsp;Р.</a>
-            </div>
-          </a>
+          <div class="catalog-item__image">
+            <img src="/img/modern-organic-thai.jpg" width="" height="" alt="MODERN ORGANIC THAI">
+          </div>
+          <div class="catalog-item__hover">
+            <h2 class="catalog-item__title">Modern Organic Thai</h2>
+            <div class="catalog-item__descr">Сайт для ресторана быстрого питания</div>
+            <a href="#" class="btn btn_catalog-item">12&nbsp;000&nbsp;Р.</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <a class="catalog-link" href="#">
-            <div class="catalog-item__image">
-              <img src="/img/avenue.jpg" width="" height="" alt="AVENUE">
-            </div>
-            <div class="catalog-item__hover">
-              <h2 class="catalog-item__title">Avenue</h2>
-              <div class="catalog-item__descr">Макет для блога о путешествиях</div>
-              <a href="#" class="btn btn_catalog-item">8&nbsp;000&nbsp;Р.</a>
-            </div>
-          </a>
+          <div class="catalog-item__image">
+            <img src="/img/avenue.jpg" width="" height="" alt="AVENUE">
+          </div>
+          <div class="catalog-item__hover">
+            <h2 class="catalog-item__title">Avenue</h2>
+            <div class="catalog-item__descr">Макет для блога о путешествиях</div>
+            <a href="#" class="btn btn_catalog-item">8&nbsp;000&nbsp;Р.</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <a class="catalog-link" href="#">
-            <div class="catalog-item__image">
-              <img src="/img/dovetail.jpg" width="" height="" alt="DOVETAIL">
-            </div>
-            <div class="catalog-item__hover">
-              <h2 class="catalog-item__title">Dovetail</h2>
-              <div class="catalog-item__descr">Интернет-магазин с галереей товаров</div>
-              <a href="#" class="btn btn_catalog-item">14&nbsp;000&nbsp;Р.</a>
-            </div>
-          </a>
+          <div class="catalog-item__image">
+            <img src="/img/dovetail.jpg" width="" height="" alt="DOVETAIL">
+          </div>
+          <div class="catalog-item__hover">
+            <h2 class="catalog-item__title">Dovetail</h2>
+            <div class="catalog-item__descr">Интернет-магазин с галереей товаров</div>
+            <a href="#" class="btn btn_catalog-item">14&nbsp;000&nbsp;Р.</a>
+          </div>
         </article>
         <div class="pager">
           <div class="pager__pages">
@@ -215,21 +201,21 @@
       <section class="social g-clearfix">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social-item__btn social-item__vk" href="#"></a>
+            <a class="social-item__btn social-item__vk" href="#">Вконтакте</a>
           </li>
           <li class="social__item">
-            <a class="social-item__btn social-item__fb" href="#"></a>
+            <a class="social-item__btn social-item__fb" href="#">Facebook</a>
           </li>
           <li class="social__item">
-            <a class="social-item__btn social-item__inst" href="#"></a>
+            <a class="social-item__btn social-item__inst" href="#">Instagram</a>
           </li>
         </ul>
         <div class="social__text-block">
-        <span class="social__title">Давайте дружить, это выгодно!</span>
-        <p class="social__text">
-          Скидка 10% для друзей из социальных сетей.
-        </p>
-      </div>
+          <span class="social__title">Давайте дружить, это выгодно!</span>
+          <p class="social__text">
+            Скидка 10% для друзей из социальных сетей.
+          </p>
+        </div>
       </section>
     </footer>
   </body>
