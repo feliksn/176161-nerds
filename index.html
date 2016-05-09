@@ -2,7 +2,6 @@
 <html lang="ru-RU">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/default.css">
@@ -10,11 +9,9 @@
   </head>
   <body>
     <header class="header">
-      <div class="g-clearfix">
+      <div class="header__container g-clearfix">
         <nav class="nav">
-          <div class="nav__logo">
-            <a class="nav__link nav__link nav__link_selected"><img src="/img/logo.png" height="" width="" alt="Веб-студия Нёрдс"></a>
-          </div>
+            <a class="nav__logo nav__link_selected"><img src="./img/logo.png" width="139" height="56" alt="Веб-студия Нёрдс"></a>
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link nav__link_selected">Студия</a>
@@ -26,7 +23,7 @@
               <a class="nav__link" href="#">Магазин</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Контакты</a>
+              <a class="nav__link nav__link_last" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -34,35 +31,40 @@
           <a class="cart__link" href="#">Корзина</a>
         </div>
       </div>
-      <div class="slider">
-        <div class="slider-controls">
-          <i class="active"></i>
-          <i></i>
-          <i></i>
-        </div>
-        <div class="slides">
-          <div class="slide">
-            <div class="slide-text">
-              <div class="heading-1">Долго, дорого, скрупулезно</div>
-              <p>Математически выверенный дизайн<br>
-                для вашего сайта или мобильного приложения.</p>
-              <a class="btn btn_red" href="#">Узнать больше</a>
+      <div class="header__container">
+        <div class="slider">
+          <div class="slider__controls">
+            <input class="slider__input" type="radio" id="slider__btn-1" name="toggle" checked>
+            <input class="slider__input" type="radio" id="slider__btn-2" name="toggle">
+            <input class="slider__input" type="radio" id="slider__btn-3" name="toggle">
+            <div class="slider-controls">
+              <label class="slider__label" for="slider__btn-1"></label>
+              <label class="slider__label" for="slider__btn-2"></label>
+              <label class="slider__label" for="slider__btn-3"></label>
             </div>
-          </div>
-          <div class="slide">
-            <div class="slide-text">
-              <div class="heading-1">Дорого, скрупулезно</div>
-              <p>Математически выверенный дизайн<br>
-                для вашего сайта или мобильного приложения.</p>
-              <a class="btn btn_red" href="#">Узнать больше</a>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide-text">
-              <div class="heading-1">Скрупулезно</div>
-              <p>Математически выверенный дизайн<br>
-                для вашего сайта или мобильного приложения.</p>
-              <a class="btn btn_red" href="#">Узнать больше</a>
+            <div class="slider__slides">
+              <div class="slide">
+                <div class="slide__text">
+                  <div class="heading-1">Долго, дорого, скрупулезно</div>
+                  <p>Математически выверенный дизайн<br>
+                    для вашего сайта или мобильного приложения.</p>
+                  <a class="btn btn_red" href="#">Узнать больше</a>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide__text">
+                  <div class="heading-1">Любите ли вы математику, как любим её мы?</div>
+                  <p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив, чтобы дать им возможность всё просчитать</p>
+                  <a class="btn btn_red" href="#">Узнать больше</a>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide__text">
+                  <div class="heading-1">Только наркотики, только хардкор!</div>
+                  <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов</p>
+                  <a class="btn btn_red" href="#">Узнать больше</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -71,19 +73,19 @@
     <main class="main">
       <section class="our-services g-clearfix">
         <div class="our-services__item">
-          <img class="our-services__image" src="/img/web-sites.jpg" alt="Веб-сайты">
+          <img class="our-services__image" src="./img/web-sites.png" width="240px" height="124px" alt="Веб-сайты">
           <h2 class="heading-3">Веб-сайты</h2>
           <p class="our-services__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
           <a class="btn btn_small btn_red" href="#">Заказать</a>
         </div>
         <div class="our-services__item">
-          <img class="our-services__image" src="/img/apps.jpg" alt="Веб-сайты">
+          <img class="our-services__image" src="./img/apps.png" width="240px" height="124px" alt="Веб-сайты">
           <h2 class="heading-3">Приложения</h2>
           <p class="our-services__text">Покорите топ-10 приложений в AppStrore и Google Play</p>
           <a class="btn btn_small btn_green" href="#">Заказать</a>
         </div>
         <div class="our-services__item">
-          <img class="our-services__image" src="/img/presentations.jpg" alt="Веб-сайты">
+          <img class="our-services__image" src="./img/presentations.png" width="240px" height="124px" alt="Веб-сайты">
           <h2 class="heading-3">Презентации</h2>
           <p class="our-services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
           <a class="btn btn_small btn_yellow" href="#">Заказать</a>
@@ -104,9 +106,11 @@
           </ul>
         </div>
         <div class="about-us__descr-2">
-          <img class="about-us__logo" src="#" width="" height="" alt="Веб-студия Нёрдс">
-          <span>Since 2004</span>
-          <span class="abous-us__label">Как мы работаем:</span>
+          <img class="about-us__logo" src="./img/logo-2.png" width="187px" height="75px" alt="Веб-студия Нёрдс">
+          <div class="about-us__since">
+            <span class="about-us__since-text">Since 2004</span>
+          </div>
+          <span class="about-us__label">Как мы работаем:</span>
           <ul class="about-us__list">
             <li class="about-us__item">С самоотдачей 146%</li>
             <li class="about-us__item">Соблюдая сроки на 100%</li>
@@ -114,30 +118,33 @@
           </ul>
         </div>
       </section>
-      <section class="our-partners">
+      <section class="our-partners g-clearfix">
         <ul class="our-partners__list">
           <li class="our-partners__item">
-            <a class="our-partners__link" href="#"><img src="/img/glukhanko.jpg" width="" height="" alt="Glukhanko"></a>
+            <a class="our-partners__link" href="#"><img src="./img/glukhanko.png" width="198px" height="37px" alt="Glukhanko"></a>
           </li>
           <li class="our-partners__item">
-            <a class="our-partners__link" href="#"><img src="/img/htmlacademy.jpg" width="" height="" alt="html academy"></a>
+            <a class="our-partners__link" href="#"><img src="./img/htmlacademy.jpg" width="199px" height="68px" alt="html academy"></a>
           </li>
           <li class="our-partners__item">
-            <a class="our-partners__link" href="#"><img src="/img/barbershop-borodinski.jpg" width="" height="" alt="Barbershop Borodinski"></a>
+            <a class="our-partners__link our-partners__link_last" href="#"><img src="./img/barbershop-borodinski.jpg" width="209px" height="90px" alt="Barbershop Borodinski"></a>
           </li>
         </ul>
       </section>
     </main>
     <footer class="footer">
       <section class="contact-info">
+        <div class="footer__container">
         <div class="contact-info__contact-us">
           <span class="contact-info__title">Nërds design studio</span>
-          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
           <p>тел. +7 (812) 275-75-75</p>
           <a class="btn btn_red" href="#">Напишите нам</a>
         </div>
+        </div>
       </section>
       <section class="social g-clearfix">
+        <div class="footer__container">
         <ul class="social__list">
           <li class="social__item">
             <a class="social-item__btn social-item__vk" href="#">Вконтакте</a>
@@ -150,11 +157,12 @@
           </li>
         </ul>
         <div class="social__text-block">
-          <span class="social__title">Давайте дружить, это выгодно!</span>
+          <span class="heading-1">Давайте дружить, это выгодно!</span>
           <p class="social__text">
             Скидка 10% для друзей из социальных сетей.
           </p>
         </div>
+      </div>
       </section>
     </footer>
   </body>
