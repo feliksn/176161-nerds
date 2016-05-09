@@ -44,29 +44,48 @@ html, body {
 }
 .nav {
   float: left;
-  padding-top: 22px;
+  padding-bottom: 0;
 }
 .nav__logo {
   float: left;
-  width: 260px;
+  width: 140px;
+  margin-top: 28px;
+  font-size: 0;
+  line-height: 0;
 }
 .nav__list {
   float: left;
-  width: 410px;
-  margin: 0;
+  width: 400px;
+  margin-top: 54px;
+  margin-left: 183px;
   padding: 0;
   list-style: none;
   font-size: 0;
 }
 .nav__item {
-  display: inline;
+  display: inline-block;
   vertical-align: bottom;
   font-size: 14px;
   line-height: 30px;
+  margin-right: 44px;
   text-transform: uppercase;
 }
+.nav__item_selected {
+  position: relative;
+  background-color: none;
+}
+.nav__item_selected::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fb565a;
+}
+.nav__item_last:last-child {
+  margin-right: 0;
+}
 .nav__link {
-  margin-right: 40px;
   text-decoration: none;
   color: #000000;
 }
@@ -77,18 +96,28 @@ html, body {
   color: #000000;
   opacity: 0.4;
 }
-.nav__link_last:last-child {
-  margin-right: 0;
-}
 .cart {
-  padding-top: 55px;
+  margin-top: 54px;
   float: right;
   max-width: 110px;
 }
+.cart_selected {
+  position: relative;
+  background-color: none;
+}
+.cart_selected::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fb565a;
+}
 .cart__link {
+  position: relative;
   display: inline-block;
   vertical-align: top;
-  padding-left: 35px;
+  padding-left: 28px;
   text-decoration: none;
   color: #000000;
   font-size: 14px;
@@ -102,6 +131,17 @@ html, body {
   color: #000000;
   opacity: 0.4;
 }
+.cart__link::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/spritesheet.png");
+  background-position: -10px -10px;
+  opacity: 1;
+}
 .header__extend {
   padding-top: 55px;
 }
@@ -109,7 +149,9 @@ html, body {
   position: relative;
   width: 880px;
   height: 310px;
-  margin: 0 auto;
+  margin-top: 42px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .slider__input {
   position: absolute;
@@ -121,7 +163,7 @@ html, body {
   left: 50%;
   width: 200px;
   height: 10px;
-  margin-left: -100px;
+  margin-left: -110px;
   text-align: center;
   z-index: 1000;
 }
@@ -155,8 +197,8 @@ html, body {
 .btn {
   display: block;
   width: 240px;
-  padding: 10px 0;
-  margin-top: 25px;
+  padding: 8px 0;
+  margin-top: 28px;
   font-size: 12px;
   color: white;
   text-transform: uppercase;
@@ -287,6 +329,10 @@ html, body {
 .our-partners__item {
   display: inline-block;
   vertical-align: middle;
+  opacity: 0.2;
+}
+.our-partners__item:hover, .our-partners__item:active {
+  opacity: 1;
 }
 .our-partners__link {
   display: block;
@@ -356,7 +402,7 @@ html, body {
   padding-bottom: 70px;
 }
 .social__list {
-  width: 240px;
+  width: 243px;
   float: left;
   margin: 0;
   padding: 0;
@@ -367,12 +413,109 @@ html, body {
   width: 580px;
   float: right;
 }
+.social__item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 63px;
+  height: 63px;
+  margin-right: 27px;
+  border-radius: 50%;
+  background: #e1e1e1;
+}
+.social__item:hover {
+  background: #fb565a;
+}
+.social__item:active {
+  background: #d6494d;
+}
+.social__item:last-child {
+  margin-right: 0;
+}
+.social__item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+}
+.social__vk::before {
+  width: 26px;
+  height: 15px;
+  background-position: -10px -339px;
+}
+.social__fb::before {
+  width: 12px;
+  height: 22px;
+  background-position: -10px -256px;
+}
+.social__inst::before {
+  width: 21px;
+  height: 21px;
+  background-position: -10px -298px;
+}
+
+/* SPRITESHEET */
+
+.sprite {
+  background-image: url(spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+.sprite-icon-cart {
+  width: 15px;
+  height: 15px;
+  background-position: -10px -10px;
+}
+.sprite-icon-cart-hover {
+  width: 15px;
+  height: 15px;
+  background-position: -10px -45px;
+}
+.sprite-icon-check-off {
+  width: 23px;
+  height: 23px;
+  background-position: -10px -80px;
+}
+.sprite-icon-check-on {
+  width: 27px;
+  height: 23px;
+  background-position: -10px -123px;
+}
+.sprite-icon-circle {
+  width: 25px;
+  height: 25px;
+  background-position: -10px -166px;
+}
+.sprite-icon-circle-dot {
+  width: 25px;
+  height: 25px;
+  background-position: -10px -211px;
+}
+.sprite-icon-facebook {
+  width: 12px;
+  height: 22px;
+  background-position: -10px -256px;
+}
+.sprite-icon-instagram {
+  width: 21px;
+  height: 21px;
+  background-position: -10px -298px;
+}
+.sprite-icon-vk {
+  width: 26px;
+  height: 15px;
+  background-position: -10px -339px;
+}
 
 /*======================================
  Системное оформление - не изменять
 =======================================*/
 
-body {
+
+/*body {
   padding: 3px;
 }
 body > *, body > * > *, body > * > * > * {
@@ -416,4 +559,4 @@ body > * > * > * {
 body > * > * > *::before {
   color: black;
   background: rgb(234, 255, 45);
-}
+}*/
