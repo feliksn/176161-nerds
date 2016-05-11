@@ -9,19 +9,22 @@ html, body {
   color: #000000;
 }
 .heading-1 {
-  display: inline;
+  margin: 0;
+  padding: 0;
   font-size: 36px;
   font-weight: normal;
   line-height: 1em;
 }
 .heading-2 {
-  display: inline;
+  margin: 0;
+  padding: 0;
   font-size: 40px;
   font-weight: normal;
   line-height: 1.2em;
 }
 .heading-3 {
-  display: inline;
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.667em;
@@ -77,6 +80,7 @@ html, body {
 .nav__item_selected::after {
   content: "";
   position: absolute;
+  left: 0;
   bottom: 0;
   width: 100%;
   height: 2px;
@@ -142,6 +146,9 @@ html, body {
   background-position: -10px -10px;
   opacity: 1;
 }
+.cart__link:hover::before {
+  background-position: -10px -45px;
+}
 .header__extend {
   padding-top: 55px;
 }
@@ -198,7 +205,7 @@ html, body {
   display: block;
   width: 240px;
   padding: 8px 0;
-  margin-top: 28px;
+  margin-top: 30px;
   font-size: 12px;
   color: white;
   text-transform: uppercase;
@@ -255,15 +262,27 @@ html, body {
   min-height: 144px;
   margin-right: 80px;
 }
+.our-services__heading {
+  /*margin-top: 18px;
+  padding: 0;*/
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.667em;
+  text-transform: uppercase;
+
+}
 .our-services__text {
   font-size: 15px;
 }
 .our-services__item:last-child {
   margin-right: 0;
 }
+.btn_small {
+  margin-top: 28px;
+}
 .about-us {
-  padding-top: 75px;
-  padding-bottom: 70px;
+  padding-top: 61px;
+  padding-bottom: 49px;
 }
 .about-us__descr-1 {
   float: left;
@@ -273,12 +292,21 @@ html, body {
   float: right;
   width: 240px;
 }
+.about-us__heading {
+  margin-top: 9px;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1em;
+}
+.about-us__text {
+  margin-top: 19px;
+}
 .about-us__logo {
   padding: 0 30px;
 }
 .about-us__since {
   text-align: center;
-  padding: 28px 0;
+  padding: 20px 0;
 }
 .about-us__since::after {
   content: "";
@@ -299,6 +327,8 @@ html, body {
   background-color: #ffffff;
 }
 .about-us__label {
+  margin-top: 44px;
+  margin-bottom: 22px;
   text-transform: uppercase;
 }
 .about-us__list {
@@ -307,7 +337,8 @@ html, body {
   list-style: none;
 }
 .about-us__item {
-  text-indent: 0;
+  margin-bottom: 22px;
+  margin-left: 12px;
 }
 .about-us__item::before {
   color: #fb565a;
@@ -316,7 +347,7 @@ html, body {
 }
 .our-partners {
   padding-top: 45px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
 }
@@ -391,11 +422,13 @@ html, body {
 .contact-info {
   width: auto;
   min-height: 416px;
+  margin-top: 85px;
   background: #ffffff url("../img/map.jpg") no-repeat center top;
 }
 .contact-info__contact-us {
-  width: 250px;
+  width: 200px;
   padding: 25px;
+  background: #ffffff
 }
 .social {
   padding-top: 75px;
@@ -410,7 +443,7 @@ html, body {
   font-size: 0;
 }
 .social__text-block {
-  width: 580px;
+  width: 560px;
   float: right;
 }
 .social__item {
@@ -422,6 +455,9 @@ html, body {
   margin-right: 27px;
   border-radius: 50%;
   background: #e1e1e1;
+}
+.social__text {
+  margin-top: 8px;
 }
 .social__item:hover {
   background: #fb565a;
