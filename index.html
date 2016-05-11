@@ -73,19 +73,19 @@
     <main class="main">
       <section class="our-services g-clearfix">
         <div class="our-services__item">
-          <img class="our-services__image" src="./img/web-sites.png" width="240px" height="124px" alt="Веб-сайты">
+          <img class="our-services__image" src="./img/web-sites.png" width="240" height="124" alt="Веб-сайты">
           <h2 class="our-services__heading">Веб-сайты</h2>
           <p class="our-services__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
           <a class="btn btn_red our-services__btn" href="#">Заказать</a>
         </div>
         <div class="our-services__item">
-          <img class="our-services__image" src="./img/apps.png" width="240px" height="124px" alt="Веб-сайты">
+          <img class="our-services__image" src="./img/apps.png" width="240" height="124" alt="Веб-сайты">
           <h2 class="our-services__heading">Приложения</h2>
           <p class="our-services__text">Покорите топ-10 приложений в App Store и Google Play</p>
           <a class="btn btn_green our-services__btn" href="#">Заказать</a>
         </div>
         <div class="our-services__item">
-          <img class="our-services__image" src="./img/presentations.png" width="240px" height="124px" alt="Веб-сайты">
+          <img class="our-services__image" src="./img/presentations.png" width="240" height="124" alt="Веб-сайты">
           <h2 class="our-services__heading">Презентации</h2>
           <p class="our-services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
           <a class="btn btn_yellow our-services__btn" href="#">Заказать</a>
@@ -105,7 +105,7 @@
           </ul>
         </div>
         <div class="about-us__descr-2">
-          <img class="about-us__logo" src="./img/logo-2.png" width="187px" height="75px" alt="Веб-студия Нёрдс">
+          <img class="about-us__logo" src="./img/logo-2.png" width="187" height="75" alt="Веб-студия Нёрдс">
           <div class="about-us__since">
             <span class="about-us__since-text">Since 2004</span>
           </div>
@@ -120,13 +120,13 @@
       <section class="our-partners g-clearfix">
         <ul class="our-partners__list">
           <li class="our-partners__item">
-            <a class="our-partners__link" href="#"><img src="./img/glukhanko.png" width="198px" height="37px" alt="Glukhanko"></a>
+            <a class="our-partners__link" href="#"><img src="./img/glukhanko.png" width="198" height="37" alt="Glukhanko"></a>
           </li>
           <li class="our-partners__item">
-            <a class="our-partners__link" href="#"><img src="./img/htmlacademy.png" width="199px" height="68px" alt="html academy"></a>
+            <a class="our-partners__link" href="#"><img src="./img/htmlacademy.png" width="199" height="68" alt="html academy"></a>
           </li>
           <li class="our-partners__item">
-            <a class="our-partners__link our-partners__link_last" href="#"><img src="./img/barbershop.png" width="209px" height="90px" alt="Barbershop Borodinski"></a>
+            <a class="our-partners__link our-partners__link_last" href="#"><img src="./img/barbershop.png" width="209" height="90" alt="Barbershop Borodinski"></a>
           </li>
         </ul>
       </section>
@@ -174,5 +174,27 @@
         </div>
       </section>
     </footer>
+    <div class="popup">
+      <div class="popup__container">
+        <form action="#">
+          <div class="popup__block g-clearfix">
+            <div class="popup__field">
+              <label class="popup__label" for="username">Ваше имя:</label>
+              <input class="popup__data" id="username" type="text" placeholder="Представьтесь,пожалуйста">
+            </div>
+            <div class="popup__field">
+              <label class="popup__label" for="email">Ваш e-mail:</label>
+              <input class="popup__data" id="email" type="email" placeholder="Для отправки ответа">
+            </div>
+          </div>
+          <div class="popup__text-field">
+            <label class="popup__label" for="letter-text">Текст письма:</label>
+            <textarea class="popup__textarea" name="text" id="letter-text" placeholder="В свободной форме"></textarea>
+            <input class="popup__btn btn_red" type="submit" value="Отправить">
+          </div>
+        </form>
+      <div class="popup__close"></div>
+      </div>
+    </div>
   </body>
 </html>
