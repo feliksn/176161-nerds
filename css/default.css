@@ -329,7 +329,7 @@ html, body {
 #slider__btn-3:checked ~ .slider__slides .slide:nth-child(3) {
   display: block;
 }
-.welcome-title {
+.welcome {
   width: auto;
   text-align: center;
   margin: 0 100px;
@@ -465,9 +465,235 @@ html, body {
 .our-partners__link_last:last-child {
   margin-right: 0;
 }
+
+/* CATALOG PAGE */
+
+.welcome__header {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 48px;
+}
 .filter {
   float: left;
   width: 240px;
+}
+.filter__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/*.filter__label {
+  display: block;
+}*/
+
+.filter__price-range {
+  position: relative;
+  height: 41px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+.filter__price-scale {
+  height: 2px;
+  background: #d7dcde;
+}
+.filter__price-bar {
+  width: 30%;
+  height: 2px;
+  margin-left: 20%;
+  background: #00ca74;
+}
+.filter__price-toggle {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  cursor: pointer;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  background: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+.filter__price-toggle_min {
+  left: 50px;
+}
+.filter__price-toggle_max {
+  left: 110px;
+}
+.filter__price-controls {
+  font-size: 0;
+}
+.filter__price-label {
+  font-size: 16px;
+  display: inline-block;
+  width: 50%;
+}
+.filter__price-max {
+  text-align: right;
+}
+.filter__price-min, .filter__price-max {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  width: 60px;
+  margin-left: 10px;
+  padding: 8px 10px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #f1f1f1;
+}
+.btn__filter{
+  display: inline-block;
+  min-width: 155px;
+  height: 38px;
+  margin-top: 58px;
+  padding-top: 0px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 38px;
+  color: #283136;
+  background-color: #f1f1f1;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  border: 0 none;
+  border-radius: 3px;
+}
+
+.parameters-btn:hover {
+  background-color: #e5e5e5;
+}
+
+.parameters-btn:active {
+  background-color: #d5d5d5;
+  box-shadow: inset 0 3px #b5b5b5;
+}
+
+.filter__grid-type {
+  display: none;
+}
+
+.filter__label_radio {
+  display: block;
+  margin: 16px 0 20px;
+  line-height: 20px;
+  padding-left: 35px;
+  position: relative;
+  cursor: pointer;
+}
+
+.filter__label_radio::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  width: 16px;
+  height: 16px;
+  border: 4px solid #c1c1c1;
+  border-radius: 50px;
+}
+
+.filter__label_radio:checked::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  background-color: #c1c1c1;
+}
+
+.filter__label_radio:hover::before {
+  border-color: #b5b5b5;
+}
+
+.filter__label_radio:hover::after {
+  background-color: #b5b5b5;
+}
+
+.filter__label_radio:active::before {
+  opacity: 0.3;
+}
+
+.filter__label_radio:active::after {
+  opacity: 0.3;
+}
+
+.filter__label_radio:disabled::before {
+  opacity: 0.3;
+}
+
+.filter__label_radio:disabled::after {
+  opacity: 0.3;
+}
+
+.filter__label_radio:checked:disabled::before {
+  opacity: 0.3;
+}
+
+.filter__label_radio:checked:disabled::after {
+  opacity: 0.3;
+}
+
+.filter__features {
+  display: none;
+}
+
+.filter__label_checkbox {
+  display: block;
+  margin: 16px 0 20px;
+  line-height: 20px;
+  padding-left: 35px;
+  position: relative;
+  cursor: pointer;
+}
+
+.filter__label_checkbox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: -1px;
+  background-image: url("../img/spritesheet.png");
+  width: 23px;
+  height: 23px;
+  background-position: -10px -166px;
+}
+
+.filter__label_checkbox:checked::before {
+  width: 27px;
+  height: 23px;
+  background-position: -10px -209px;
+}
+
+.filter__label_checkbox:hover::before {
+  background-position: -10px -123px;
+}
+
+.filter__label_checkbox:checked:hover::before {
+  background-position: -10px -295px;
+}
+
+.filter__label_checkbox:disabled::before {
+  background-position: -10px -10px;
+}
+
+.filter__label_checkbox:checked:disabled::before {
+  background-position: -10px -252px;
 }
 .sorter {
   width: 560px;
@@ -624,7 +850,7 @@ html, body {
   width: 100%;
   height: 100%;
   z-index: 10;
-  /*display: none;*/
+  display: none;
 }
 .popup__container {
   position: absolute;

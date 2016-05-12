@@ -9,23 +9,21 @@
   </head>
   <body>
     <header class="header">
-      <div class="g-clearfix">
+      <div class="header__container g-clearfix">
         <nav class="nav">
-          <div class="nav__logo">
-            <a class="nav__link" href="#"><img src="/img/logo.png" height="" width="" alt="Веб-студия Нёрдс"></a>
-          </div>
+          <a class="nav__logo"><img src="./img/logo.png" width="139" height="56" alt="Веб-студия Нёрдс"></a>
           <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="#">Студия</a>
+            <li class="nav__item nav__item_selected">
+              <a class="nav__link nav__link_selected">Студия</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Клиенты</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link nav__link_selected">Магазин</a>
+              <a class="nav__link" href="#">Магазин</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link_last" href="#">Контакты</a>
+            <li class="nav__item nav__item_last">
+              <a class="nav__link" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -33,15 +31,17 @@
           <a class="cart__link" href="#">Корзина</a>
         </div>
       </div>
-      <div class="welcome-title">
-        <div class="heading-2">Добро пожаловать в
-          <h1 class="heading-2">магазин готовых макетов</h1>
+      <div class="header__container">
+      <div class="welcome">
+        <div class="welcome__header">Добро пожаловать в
+          <h1 class="welcome__header">магазин готовых макетов</h1>
         </div>
       </div>
+    </div>
     </header>
     <main class="main g-clearfix">
       <section class="filter">
-        <form class="filter__form" action="/echo" method="post">
+        <form action="/echo" method="post">
           <fieldset class="filter__group">
             <legend class="filter__title">Стоимость:</legend>
             <div class="filter__price">
@@ -53,56 +53,54 @@
                 <div class="filter__price-toggle filter__price-toggle_max"></div>
               </div>
               <div class="filter__price-controls">
-                <label class="filter__label" for="price-from">От</label>
-                <input class="filter__price-min" type="text" id="price-min" name="price-min" value="0">
-                <label class="filter__label" for="price-to">До</label>
-                <input class="filter__price-max" type="text" id="price-max" name="price-max" value="15 000">
+                <label class="filter__price-label" for="price-from">от <input class="filter__price-min" type="text" id="price-min" name="price-min" value="0"></label>
+                <label class="filter__price-label" for="price-to">до <input class="filter__price-max" type="text" id="price-max" name="price-max" value="15 000"></label>
               </div>
             </div>
           </fieldset>
           <fieldset class="filter__group">
             <legend class="filter__title">Сетка:</legend>
-            <div class="filter__grid-type">
-              <label class="filter__label" for="grid-adaptive">
-                <input class="filter__grid-type filter__grid-type_checked" type="radio" id="grid-adaptive" name="grid-adaptive" value="grid-adaptive" checked>
+            <div class="filter__grid-type-block">
+              <label class="filter__label filter__label_radio" for="grid-adaptive">
+                <input class="filter__grid-type filter__grid-type_checked" type="radio" id="grid-adaptive" name="grid" value="grid-adaptive" checked>
                 Адаптивная
               </label>
-              <label class="filter__label" for="grid-fixed">
-                <input class="filter__grid-type" type="radio" id="grid-fixed" name="grid-fixed" value="grid-fixed">
+              <label class="filter__label filter__label_radio" for="grid-fixed">
+                <input class="filter__grid-type" type="radio" id="grid-fixed" name="grid" value="grid-fixed">
                 Фиксированная
               </label>
-              <label class="filter__label" for="grid-flex">
-                <input class="filter__grid-type" type="radio" id="grid-flex" name="grid-flex" value="grid-flex">
+              <label class="filter__label filter__label_radio" for="grid-flex">
+                <input class="filter__grid-type" type="radio" id="grid-flex" name="grid" value="grid-flex">
                 Резиновая
               </label>
             </div>
           </fieldset>
           <fieldset class="filter__group">
             <legend class="filter__title">Особенности:</legend>
-            <div class="filter__features">
-              <label class="filter__label" for="slider">
-                <input class="filter__features filter__features_checked" type="checkbox" id="slider" name="slider" value="slider" checked>
+            <div class="filter__features-block">
+              <label class="filter__label filter__label_checkbox" for="slider">
+                <input class="filter__features filter__features_checked" type="checkbox" id="slider" name="features" value="slider" checked>
                 Слайдер
               </label>
-              <label class="filter__label" for="advantages">
-                <input class="filter__features" type="checkbox" id="advantages" name="advantages" value="advantages">
+              <label class="filter__label filter__label_checkbox" for="advantages">
+                <input class="filter__features" type="checkbox" id="advantages" name="features" value="advantages">
                 Блок преимуществ
               </label>
-              <label class="filter__label" for="news">
-                <input class="filter__features filter__features_checked" type="checkbox" id="news" name="news" value="news" checked>
+              <label class="filter__label filter__label_checkbox" for="news">
+                <input class="filter__features filter__features_checked" type="checkbox" id="news" name="features" value="news" checked>
                 Новости
               </label>
-              <label class="filter__label" for="gallery">
-                <input class="filter__features" type="checkbox" id="gallery" name="gallery" value="gallery">
+              <label class="filter__label filter__label_checkbox" for="gallery">
+                <input class="filter__features" type="checkbox" id="gallery" name="features" value="gallery">
                 Галерея
               </label>
-              <label class="filter__label" for="cart">
-                <input class="filter__features" type="checkbox" id="cart" name="cart" value="cart">
+              <label class="filter__label filter__label_checkbox" for="cart">
+                <input class="filter__features" type="checkbox" id="cart" name="features" value="cart">
                 Слайдер
               </label>
             </div>
           </fieldset>
-          <input class="btn btn_gray" type="submit" id="filter" name="filter" value="Показать">
+          <input class="btn btn__filter" type="submit" id="filter" name="filter" value="Показать">
         </form>
       </section>
       <div class="catalog__list">
@@ -120,7 +118,7 @@
         </section>
         <article class="catalog-item">
           <div class="catalog-item__image">
-            <img src="/img/aviator.jpg" width="" height="" alt="AVIATOR">
+            <img src="./img/aviator.jpg" width="240" height="240" alt="AVIATOR">
           </div>
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Aviator</h2>
@@ -130,7 +128,7 @@
         </article>
         <article class="catalog-item">
           <div class="catalog-item__image">
-            <img src="/img/sunset.jpg" width="" height="" alt="SUNSET">
+            <img src="./img/sunset.jpg" width="240" height="240" alt="SUNSET">
           </div>
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Sunset</h2>
@@ -140,7 +138,7 @@
         </article>
         <article class="catalog-item">
           <div class="catalog-item__image">
-            <img src="/img/forte.jpg" width="" height="" alt="FORTE">
+            <img src="./img/forte.jpg" width="240" height="240" alt="FORTE">
           </div>
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Forte</h2>
@@ -150,7 +148,7 @@
         </article>
         <article class="catalog-item">
           <div class="catalog-item__image">
-            <img src="/img/modern-organic-thai.jpg" width="" height="" alt="MODERN ORGANIC THAI">
+            <img src="./img/modern-organic-thai.jpg" width="240" height="240" alt="MODERN ORGANIC THAI">
           </div>
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Modern Organic Thai</h2>
@@ -160,7 +158,7 @@
         </article>
         <article class="catalog-item">
           <div class="catalog-item__image">
-            <img src="/img/avenue.jpg" width="" height="" alt="AVENUE">
+            <img src="./img/avenue.jpg" width="240" height="240" alt="AVENUE">
           </div>
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Avenue</h2>
@@ -170,7 +168,7 @@
         </article>
         <article class="catalog-item">
           <div class="catalog-item__image">
-            <img src="/img/dovetail.jpg" width="" height="" alt="DOVETAIL">
+            <img src="./img/dovetail.jpg" width="240" height="240" alt="DOVETAIL">
           </div>
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Dovetail</h2>
@@ -190,32 +188,68 @@
     </main>
     <footer class="footer">
       <section class="contact-info">
-        <div class="contact-info__contact-us">
-          <span class="contact-info__title">Nërds design studio</span>
-          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p>тел. +7 (812) 275-75-75</p>
-          <a class="btn btn_red" href="#">Напишите нам</a>
+        <div class="contact-info__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6046107610714!2d30.321034091391333!3d59.938702817962124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1462953213031"
+            width="100%"
+            height="416"
+            frameborder="0"
+            style="border:0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="footer__container">
+          <div class="contact-info__contact-us">
+            <h3 class="contact-info__title">Nërds design studio</h3>
+            <p class="contact-info__text">191186, Санкт-Петербург,<br>
+              ул. Б. Конюшенная, д. 19/8</p>
+            <p class="contact-info__phone">тел. +7 (812) 275-75-75</p>
+            <a class="btn btn_red contact-info__btn" href="#">Напишите нам</a>
+          </div>
         </div>
       </section>
       <section class="social g-clearfix">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social-item__btn social-item__vk" href="#">Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social-item__btn social-item__fb" href="#">Facebook</a>
-          </li>
-          <li class="social__item">
-            <a class="social-item__btn social-item__inst" href="#">Instagram</a>
-          </li>
-        </ul>
-        <div class="social__text-block">
-          <span class="social__title">Давайте дружить, это выгодно!</span>
-          <p class="social__text">
-            Скидка 10% для друзей из социальных сетей.
-          </p>
+        <div class="footer__container">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__vk" href="#">Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__fb" href="#">Facebook</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__inst" href="#">Instagram</a>
+            </li>
+          </ul>
+          <div class="social__text-block">
+            <span class="heading-1">Давайте дружить, это выгодно!</span>
+            <p class="social__text">
+              Скидка 10% для друзей из социальных сетей.
+            </p>
+          </div>
         </div>
       </section>
     </footer>
+    <div class="popup">
+      <div class="popup__container">
+        <form action="#">
+          <div class="popup__block g-clearfix">
+            <div class="popup__field">
+              <label class="popup__label" for="username">Ваше имя:</label>
+              <input class="popup__data" id="username" type="text" placeholder="Представьтесь,пожалуйста">
+            </div>
+            <div class="popup__field">
+              <label class="popup__label" for="email">Ваш e-mail:</label>
+              <input class="popup__data" id="email" type="email" placeholder="Для отправки ответа">
+            </div>
+          </div>
+          <div class="popup__text-field">
+            <label class="popup__label" for="letter-text">Текст письма:</label>
+            <textarea class="popup__textarea" name="text" id="letter-text" placeholder="В свободной форме"></textarea>
+            <input class="popup__btn btn_red" type="submit" value="Отправить">
+          </div>
+        </form>
+      <div class="popup__close"></div>
+      </div>
+    </div>
   </body>
 </html>
