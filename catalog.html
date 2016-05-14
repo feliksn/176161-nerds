@@ -11,16 +11,16 @@
     <header class="header">
       <div class="header__container g-clearfix">
         <nav class="nav">
-          <a class="nav__logo"><img src="./img/logo.png" width="139" height="56" alt="Веб-студия Нёрдс"></a>
+          <a class="nav__logo" href="./index.html"><img src="./img/logo.png" width="139" height="56" alt="Веб-студия Нёрдс"></a>
           <ul class="nav__list">
-            <li class="nav__item nav__item_selected">
-              <a class="nav__link nav__link_selected">Студия</a>
+            <li class="nav__item">
+              <a class="nav__link" href="./index.html">Студия</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Клиенты</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Магазин</a>
+            <li class="nav__item nav__item_selected">
+              <a class="nav__link nav__link_selected">Магазин</a>
             </li>
             <li class="nav__item nav__item_last">
               <a class="nav__link" href="#">Контакты</a>
@@ -32,12 +32,12 @@
         </div>
       </div>
       <div class="header__container">
-      <div class="welcome">
-        <div class="welcome__header">Добро пожаловать в
-          <h1 class="welcome__header">магазин готовых макетов</h1>
+        <div class="welcome">
+          <div class="welcome__header">Добро пожаловать в
+            <h1 class="welcome__header">магазин готовых макетов</h1>
+          </div>
         </div>
       </div>
-    </div>
     </header>
     <main class="main g-clearfix">
       <section class="filter">
@@ -53,24 +53,26 @@
                 <div class="filter__price-toggle filter__price-toggle_max"></div>
               </div>
               <div class="filter__price-controls">
-                <label class="filter__price-label" for="price-from">от <input class="filter__price-min" type="text" id="price-min" name="price-min" value="0"></label>
-                <label class="filter__price-label" for="price-to">до <input class="filter__price-max" type="text" id="price-max" name="price-max" value="15 000"></label>
+                <label class="filter__price-label" for="price-from">от
+                  <input class="filter__price-min" type="text" id="price-min" name="price-min" value="0"></label>
+                <label class="filter__price-label" for="price-to">до
+                  <input class="filter__price-max" type="text" id="price-max" name="price-max" value="15 000"></label>
               </div>
             </div>
           </fieldset>
           <fieldset class="filter__group">
             <legend class="filter__title">Сетка:</legend>
             <div class="filter__grid-type-block">
-              <label class="filter__label filter__label_radio filter__label_radio_checked" for="grid-adaptive">
-                <input class="filter__grid-type" type="radio" id="grid-adaptive" name="grid" value="grid-adaptive" checked>
+              <input class="filter__grid-type filter__grid-type_checked" type="radio" id="grid-adaptive" name="grid" value="grid-adaptive" checked>
+              <label class="filter__label filter__label_radio" for="grid-adaptive">
                 Адаптивная
               </label>
+              <input class="filter__grid-type" type="radio" id="grid-fixed" name="grid" value="grid-fixed">
               <label class="filter__label filter__label_radio" for="grid-fixed">
-                <input class="filter__grid-type" type="radio" id="grid-fixed" name="grid" value="grid-fixed">
                 Фиксированная
               </label>
+              <input class="filter__grid-type" type="radio" id="grid-flex" name="grid" value="grid-flex">
               <label class="filter__label filter__label_radio" for="grid-flex">
-                <input class="filter__grid-type" type="radio" id="grid-flex" name="grid" value="grid-flex">
                 Резиновая
               </label>
             </div>
@@ -78,24 +80,24 @@
           <fieldset class="filter__group">
             <legend class="filter__title">Особенности:</legend>
             <div class="filter__features-block">
+              <input class="filter__features filter__features_checked" type="checkbox" id="slider" name="features" value="slider" checked>
               <label class="filter__label filter__label_checkbox" for="slider">
-                <input class="filter__features filter__features_checked" type="checkbox" id="slider" name="features" value="slider" checked>
                 Слайдер
               </label>
+              <input class="filter__features" type="checkbox" id="advantages" name="features" value="advantages">
               <label class="filter__label filter__label_checkbox" for="advantages">
-                <input class="filter__features" type="checkbox" id="advantages" name="features" value="advantages">
                 Блок преимуществ
               </label>
+              <input class="filter__features filter__features_checked" type="checkbox" id="news" name="features" value="news" checked>
               <label class="filter__label filter__label_checkbox" for="news">
-                <input class="filter__features filter__features_checked" type="checkbox" id="news" name="features" value="news" checked>
                 Новости
               </label>
+              <input class="filter__features" type="checkbox" id="gallery" name="features" value="gallery">
               <label class="filter__label filter__label_checkbox" for="gallery">
-                <input class="filter__features" type="checkbox" id="gallery" name="features" value="gallery">
                 Галерея
               </label>
+              <input class="filter__features" type="checkbox" id="cart" name="features" value="cart">
               <label class="filter__label filter__label_checkbox" for="cart">
-                <input class="filter__features" type="checkbox" id="cart" name="features" value="cart">
                 Слайдер
               </label>
             </div>
@@ -112,8 +114,8 @@
             <a class="link sorter__link" href="#">По функционалу</a>
           </div>
           <div class="sorter_pos_right">
-            <span class="sorter__item-asc_selected"></span>
-            <span class="sorter__item-desc"></span>
+            <a class="sorter__arrow sorter__arrow-up" href="#"></a>
+            <a class="sorter__arrow sorter__arrow-down sorter__arrow-down_active" href="#"></a>
           </div>
         </section>
         <article class="catalog-item">
@@ -123,7 +125,7 @@
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Aviator</h2>
             <div class="catalog-item__descr">Одностраничный макет с авторским дизайном</div>
-            <a href="#" class="btn btn_catalog-item">8&nbsp;000&nbsp;Р.</a>
+            <a href="#" class="catalog-item__price-btn">8&nbsp;000&nbsp;Р.</a>
           </div>
         </article>
         <article class="catalog-item">
@@ -133,7 +135,7 @@
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Sunset</h2>
             <div class="catalog-item__descr">Интернет-магазин с личным кабинетом</div>
-            <a href="#" class="btn btn_catalog-item">10&nbsp;000&nbsp;Р.</a>
+            <a href="#" class="catalog-item__price-btn">10&nbsp;000&nbsp;Р.</a>
           </div>
         </article>
         <article class="catalog-item">
@@ -143,7 +145,7 @@
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Forte</h2>
             <div class="catalog-item__descr">Отличный макет для личного блога</div>
-            <a href="#" class="btn btn_catalog-item">5&nbsp;000&nbsp;Р.</a>
+            <a href="#" class="catalog-item__price-btn">5&nbsp;000&nbsp;Р.</a>
           </div>
         </article>
         <article class="catalog-item">
@@ -153,7 +155,7 @@
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Modern Organic Thai</h2>
             <div class="catalog-item__descr">Сайт для ресторана быстрого питания</div>
-            <a href="#" class="btn btn_catalog-item">12&nbsp;000&nbsp;Р.</a>
+            <a href="#" class="catalog-item__price-btn">12&nbsp;000&nbsp;Р.</a>
           </div>
         </article>
         <article class="catalog-item">
@@ -163,7 +165,7 @@
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Avenue</h2>
             <div class="catalog-item__descr">Макет для блога о путешествиях</div>
-            <a href="#" class="btn btn_catalog-item">8&nbsp;000&nbsp;Р.</a>
+            <a href="#" class="catalog-item__price-btn">8&nbsp;000&nbsp;Р.</a>
           </div>
         </article>
         <article class="catalog-item">
@@ -173,16 +175,14 @@
           <div class="catalog-item__hover">
             <h2 class="catalog-item__title">Dovetail</h2>
             <div class="catalog-item__descr">Интернет-магазин с галереей товаров</div>
-            <a href="#" class="btn btn_catalog-item">14&nbsp;000&nbsp;Р.</a>
+            <a href="#" class="catalog-item__price-btn">14&nbsp;000&nbsp;Р.</a>
           </div>
         </article>
         <div class="pager">
-          <div class="pager__pages">
-            <a class="pager__page pager__page-current">1</a>
+            <a class="pager__page pager__page_active">1</a>
             <a class="pager__page" href="#">2</a>
             <a class="pager__page" href="#">3</a>
-            <a class="pager__page" href="#">Следующая</a>
-          </div>
+            <a class="pager__page pager__page-next" href="#">Следующая</a>
         </div>
       </div>
     </main>
@@ -248,7 +248,7 @@
             <input class="popup__btn btn_red" type="submit" value="Отправить">
           </div>
         </form>
-      <div class="popup__close"></div>
+        <div class="popup__close"></div>
       </div>
     </div>
   </body>
