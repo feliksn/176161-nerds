@@ -109,7 +109,7 @@
         <section class="sorter g-clearfix">
           <div class="sorter_pos_left">
             <div class="sorter__label">Сортировать:</div>
-            <a class="link sorter__link sorter__link_selected" href="#">По цене</a>
+            <a class="link sorter__link sorter__link_selected">По цене</a>
             <a class="link sorter__link" href="#">По типу</a>
             <a class="link sorter__link" href="#">По функционалу</a>
           </div>
@@ -179,10 +179,10 @@
           </div>
         </article>
         <div class="pager">
-            <a class="pager__page pager__page_active">1</a>
-            <a class="pager__page" href="#">2</a>
-            <a class="pager__page" href="#">3</a>
-            <a class="pager__page pager__page-next" href="#">Следующая</a>
+          <a class="pager__page pager__page_active">1</a>
+          <a class="pager__page" href="#">2</a>
+          <a class="pager__page" href="#">3</a>
+          <a class="pager__page pager__page-next" href="#">Следующая</a>
         </div>
       </div>
     </main>
@@ -235,21 +235,22 @@
           <div class="popup__block g-clearfix">
             <div class="popup__field">
               <label class="popup__label" for="username">Ваше имя:</label>
-              <input class="popup__data" id="username" type="text" placeholder="Представьтесь,пожалуйста">
+              <input class="popup__data" id="username" name="username" type="text" placeholder="Представьтесь,пожалуйста" required>
             </div>
             <div class="popup__field">
               <label class="popup__label" for="email">Ваш e-mail:</label>
-              <input class="popup__data" id="email" type="email" placeholder="Для отправки ответа">
+              <input class="popup__data" id="email" name="email" type="email" placeholder="Для отправки ответа" required>
             </div>
           </div>
           <div class="popup__text-field">
             <label class="popup__label" for="letter-text">Текст письма:</label>
-            <textarea class="popup__textarea" name="text" id="letter-text" placeholder="В свободной форме"></textarea>
+            <textarea class="popup__textarea" name="text" id="letter-text" placeholder="В свободной форме" required></textarea>
             <input class="popup__btn btn_red" type="submit" value="Отправить">
           </div>
         </form>
-        <div class="popup__close"></div>
+        <button class="popup__close"></button>
       </div>
     </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>

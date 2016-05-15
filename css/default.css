@@ -8,28 +8,6 @@ html, body {
   color: #000;
   background-color: #fff;
 }
-.heading-1 {
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 36px;
-  margin: 0;
-  padding: 0;
-}
-.heading-2 {
-  font-size: 40px;
-  font-weight: normal;
-  line-height: 48px;
-  margin: 0;
-  padding: 0;
-}
-.heading-3 {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 30px;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-}
 .g-clearfix::after {
   display: table;
   clear: both;
@@ -38,7 +16,6 @@ html, body {
 .btn {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 12px;
-  font-weight: 300;
   line-height: 21px;
   text-align: center;
   text-decoration: none;
@@ -102,7 +79,6 @@ html, body {
   background-color: #c09b24;
   box-shadow: inset 0 3px #a3841f;
 }
-
 .header {
   margin-bottom: 80px;
   color: #000;
@@ -247,7 +223,7 @@ html, body {
 }
 .slider-controls {
   position: absolute;
-  z-index: 1000;
+  z-index: 10;
   bottom: 95px;
   left: 50%;
   width: 200px;
@@ -284,7 +260,6 @@ html, body {
 }
 .slide__heading {
   font-size: 36px;
-  font-weight: normal;
   line-height: 36px;
   margin: 0;
   padding: 0;
@@ -333,7 +308,6 @@ html, body {
 }
 .our-services__heading {
   font-size: 18px;
-  font-weight: normal;
   line-height: 30px;
   text-transform: uppercase;
 }
@@ -356,7 +330,6 @@ html, body {
 }
 .about-us__heading {
   font-size: 36px;
-  font-weight: normal;
   line-height: 36px;
   margin-top: 9px;
 }
@@ -452,7 +425,7 @@ html, body {
 .welcome {
   width: auto;
   margin-top: 64px;
-  margin-right: 100px;
+  margin-right: 107px;
   margin-bottom: -6px;
   margin-left: 100px;
   padding-bottom: 84px;
@@ -460,7 +433,6 @@ html, body {
 }
 .welcome__header {
   font-size: 40px;
-  font-weight: normal;
   line-height: 48px;
   display: inline;
   margin: 0;
@@ -485,7 +457,6 @@ html, body {
   margin-top: 14px;
   margin-bottom: 45px;
 }
-
 .filter__price-range {
   position: relative;
   height: 41px;
@@ -537,7 +508,6 @@ html, body {
   text-align: right;
 }
 .filter__price-min {
-  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
   width: 60px;
   margin-left: 7px;
@@ -550,7 +520,6 @@ html, body {
   background: #f1f1f1;
 }
 .filter__price-max {
-  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
   width: 60px;
   margin-left: 7px;
@@ -563,9 +532,7 @@ html, body {
   background: #f1f1f1;
 }
 .btn__filter {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 12px;
-  font-weight: 700;
   line-height: 38px;
   display: inline-block;
   min-width: 155px;
@@ -579,6 +546,7 @@ html, body {
   color: #283136;
   border: 0 none;
   border-radius: 3px;
+  outline: none;
   background-color: #f1f1f1;
 }
 .btn__filter:hover {
@@ -633,12 +601,6 @@ input[type='radio'] + label:hover::before {
 input[type='radio'] + label:hover::after {
   background-color: #b5b5b5;
 }
-input[type='radio'] + label:active::before {
-  opacity: .3;
-}
-input[type='radio'] + label:active::after {
-  opacity: .3;
-}
 input[type='radio']:disabled + label::before {
   opacity: .3;
 }
@@ -686,9 +648,11 @@ input[type='checkbox']:checked + label:hover::before {
 }
 input[type='checkbox']:disabled + label::before {
   background-position: -10px -80px;
+  opacity: 0.3;
 }
 input[type='checkbox']:checked:disabled + label::before {
   background-position: -10px -123px;
+  opacity: 0.3;
 }
 .sorter {
   width: 560px;
@@ -741,9 +705,7 @@ input[type='checkbox']:checked:disabled + label::before {
   background-color: #fff;
 }
 .catalog-item__title {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 18px;
-  font-weight: 500;
   line-height: 20px;
   min-height: 32px;
   margin: 0;
@@ -753,7 +715,6 @@ input[type='checkbox']:checked:disabled + label::before {
   color: #000;
 }
 .catalog-item__descr {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 20px;
   width: 165px;
@@ -762,7 +723,6 @@ input[type='checkbox']:checked:disabled + label::before {
 }
 .catalog-item__price-btn {
   font-size: 18px;
-  font-weight: 500;
   display: block;
   width: 140px;
   height: 20px;
@@ -793,7 +753,6 @@ input[type='checkbox']:checked:disabled + label::before {
 }
 .sorter__link {
   font-size: 12px;
-  font-weight: 500;
   line-height: 18px;
   display: inline-block;
   margin-right: 40px;
@@ -820,10 +779,9 @@ input[type='checkbox']:checked:disabled + label::before {
 .sorter__label {
   font-size: 12px;
   display: inline-block;
-  padding-right: 40px;
+  padding-right: 33px;
   text-transform: uppercase;
 }
-
 .sorter_pos_right {
   position: relative;
   float: right;
@@ -894,10 +852,6 @@ input[type='checkbox']:checked:disabled + label::before {
   border-radius: 3px;
   background-color: #f1f1f1;
 }
-.pager__page_active {
-  background-color: #fff;
-  box-shadow: inset 0 0 0 2px #f2f2f2;
-}
 .pager__page:hover {
   background-color: #e5e5e5;
 }
@@ -908,7 +862,17 @@ input[type='checkbox']:checked:disabled + label::before {
 .pager__page-next {
   width: 135px;
 }
-
+.pager__page_active {
+  background-color: #fff;
+  box-shadow: inset 0 0 0 2px #f2f2f2;
+}
+.pager__page_active:hover {
+  background: #fff;
+}
+.pager__page_active:active {
+  background: #fff;
+  box-shadow: inset 0 0 0 2px #f2f2f2;
+}
 .catalog-item:nth-child(2n+1) {
   margin-right: 0;
 }
@@ -925,9 +889,10 @@ input[type='checkbox']:checked:disabled + label::before {
 .contact-info__contact-us {
   position: absolute;
   top: 88px;
-  left: 193px;
+  left: 50%;
   width: 210px;
   min-height: 200px;
+  margin-left: -440px;
   padding: 20px;
   background-color: #fff;
 }
@@ -1024,7 +989,7 @@ input[type='checkbox']:checked:disabled + label::before {
 }
 .popup {
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   top: 0;
   left: 0;
   display: none;
@@ -1060,16 +1025,12 @@ input[type='checkbox']:checked:disabled + label::before {
   border: 2px solid #56bffb;
 }
 .popup__label {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 16px;
-  font-weight: 500;
   line-height: 18px;
   color: #000;
 }
 .popup__data {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 12px;
-  font-weight: 500;
   line-height: 18px;
   width: 188px;
   height: 20px;
@@ -1082,9 +1043,7 @@ input[type='checkbox']:checked:disabled + label::before {
   outline: none;
 }
 .popup__textarea {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 12px;
-  font-weight: 500;
   line-height: 18px;
   overflow: auto;
   -webkit-box-sizing: border-box;
@@ -1109,7 +1068,6 @@ input[type='checkbox']:checked:disabled + label::before {
 }
 .popup__btn {
   font-size: 12px;
-  font-weight: 300;
   line-height: 37px;
   display: inline-block;
   width: 100%;
@@ -1131,14 +1089,17 @@ input[type='checkbox']:checked:disabled + label::before {
   box-shadow: inset 0 3px #9b2d30;
 }
 .popup__close {
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  background-color: #fb565a;
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
   position: absolute;
   top: 5px;
   right: 5px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: #fb565a;
 }
 .popup__close::before, .popup__close::after {
   position: absolute;
@@ -1154,4 +1115,38 @@ input[type='checkbox']:checked:disabled + label::before {
 .popup__close::after {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+.contact-info__btn_show {
+  display: block;
+}
+
+/* Всплывающая форма */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+.popup_shake {
+  animation: shake 0.6s;
 }
