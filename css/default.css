@@ -433,6 +433,7 @@ html, body {
 }
 .welcome__header {
   font-size: 40px;
+  font-weight: normal;
   line-height: 48px;
   display: inline;
   margin: 0;
@@ -986,7 +987,6 @@ input[type='checkbox']:checked:disabled + label::before {
   top: 50%;
   left: 50%;
   content: '';
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-image: url('../img/spritesheet.png');
   background-repeat: no-repeat;
@@ -1065,7 +1065,6 @@ input[type='checkbox']:checked:disabled + label::before {
   font-size: 12px;
   line-height: 18px;
   overflow: auto;
-  -webkit-box-sizing: border-box;
   width: 100%;
   height: 114px;
   margin-top: 8px;
@@ -1127,85 +1126,91 @@ input[type='checkbox']:checked:disabled + label::before {
   width: 27px;
   height: 4px;
   content: '';
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   background-color: #fff;
 }
 .popup__close::after {
-  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 .contact-info__btn_show {
   display: block;
+  animation: fadeindown 0.6s;
 }
 
 /* Всплывающая форма */
 
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-2000px);
-    transform: translateY(-2000px);
-  }
-  70% {
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-  90% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-2000px);
-    transform: translateY(-2000px);
-  }
-  70% {
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-  90% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
 @-webkit-keyframes shake {
   0%, 100% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translateX(-10px);
     transform: translateX(-10px);
   }
   20%, 40%, 60%, 80% {
-    -webkit-transform: translateX(10px);
     transform: translateX(10px);
   }
 }
 @keyframes shake {
   0%, 100% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translateX(-10px);
     transform: translateX(-10px);
   }
   20%, 40%, 60%, 80% {
-    -webkit-transform: translateX(10px);
     transform: translateX(10px);
   }
 }
 .popup_shake {
-  -webkit-animation: shake 0.6s;
   animation: shake 0.6s;
+}
+@-webkit-keyframes fadeindown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeindown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeoutdown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes fadeoutdown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
 }
