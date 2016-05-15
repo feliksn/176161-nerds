@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/default-mini.css">
     <title>Магазин готовых макетов | Нёрдс</title>
   </head>
   <body>
@@ -55,7 +55,7 @@
               <div class="filter__price-controls">
                 <label class="filter__price-label" for="price-min">от
                   <input class="filter__price-min" type="text" id="price-min" name="price-min" value="0"></label>
-                <label class="filter__price-label" for="price-max">до
+                <label class="filter__price-label filter__price-label_right" for="price-max">до
                   <input class="filter__price-max" type="text" id="price-max" name="price-max" value="15 000"></label>
               </div>
             </div>
@@ -63,11 +63,11 @@
           <fieldset class="filter__group">
             <legend class="filter__title">Сетка:</legend>
             <div class="filter__grid-type-block">
-              <input class="filter__grid-type filter__grid-type_checked" type="radio" id="grid-adaptive" name="grid" value="grid-adaptive" checked>
+              <input class="filter__grid-type filter__grid-type_checked" type="radio" id="grid-adaptive" name="grid" value="grid-adaptive" checked disabled>
               <label class="filter__label filter__label_radio" for="grid-adaptive">
                 Адаптивная
               </label>
-              <input class="filter__grid-type" type="radio" id="grid-fixed" name="grid" value="grid-fixed">
+              <input class="filter__grid-type" type="radio" id="grid-fixed" name="grid" value="grid-fixed" disabled>
               <label class="filter__label filter__label_radio" for="grid-fixed">
                 Фиксированная
               </label>
@@ -221,7 +221,7 @@
             </li>
           </ul>
           <div class="social__text-block">
-            <span class="heading-1">Давайте дружить, это выгодно!</span>
+            <span class="social__heading">Давайте дружить, это выгодно!</span>
             <p class="social__text">
               Скидка 10% для друзей из социальных сетей.
             </p>
@@ -251,6 +251,6 @@
         <button class="popup__close"></button>
       </div>
     </div>
-    <script src="./js/script.js"></script>
+    <script src="./js/script-mini.js"></script>
   </body>
 </html>
